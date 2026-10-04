@@ -1,66 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One Saver - Easy Status Download</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Saver - WhatsApp Status Saver | Proudly Kenyan</title>
 <style>
-body{font-family:Arial;text-align:center;padding:20px;background:#f0f0f0}
-.box{background:white;padding:20px;border-radius:15px;max-width:400px;margin:auto;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
-.btn{display:block;width:100%;padding:16px;margin:12px 0;border:none;border-radius:10px;font-size:17px;font-weight:bold;cursor:pointer;text-decoration:none}
-.green{background:#25D366;color:white}
-.blue{background:#0084FF;color:white}
-.dark{background:#333;color:white;font-size:14px}
-video,img{width:100%;border-radius:10px;margin-top:15px;display:none}
-.ad-box{background:#fffde7;border:1px dashed #f9a825;padding:10px;margin:15px 0;border-radius:8px;font-size:13px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{background:#f8b5f0;min-height:100vh;}
+.header{background:#00d344;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}
+.logo{color:white;font-weight:800;font-size:24px;}.domain{font-size:12px;opacity:0.9;margin-left:6px;}
+.container{max-width:480px;margin:0 auto;padding:14px;}
+.card{background:white;border-radius:20px;padding:20px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+.badge{background:#f1f1f1;border-radius:20px;padding:6px 14px;font-size:13px;display:flex;justify-content:center;color:#333;width:fit-content;margin:0 auto 12px auto;}
+.title{font-size:32px;font-weight:900;color:#0a4a3a;text-align:center;}
+.subtitle{color:#666;text-align:center;font-size:15px;margin-top:6px;}
+.ad-box{background:#fff8c5;border:2px dashed #e6c200;border-radius:12px;padding:14px;text-align:center;font-size:13px;color:#8a6d00;font-weight:600;margin-bottom:14px;}
+.drop-zone{border:3px dashed #00d344;border-radius:18px;padding:30px 18px;text-align:center;background:#f7fff9;cursor:pointer;}
+.drop-zone h3{font-size:19px;font-weight:800;}.link-input{width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-top:10px;}
+.btn{width:100%;padding:14px;border:none;border-radius:12px;font-weight:800;font-size:16px;margin-top:12px;cursor:pointer;}
+.btn-green{background:#00d344;color:white;}.btn-black{background:#111;color:white;}
+.preview-area{display:none;margin-top:14px;}.preview-area img,.preview-area video{width:100%;border-radius:12px;max-height:400px;background:#000;}
+.how-title{font-weight:800;}.how-text{font-size:14px;color:#444;margin-top:6px;line-height:1.5;}
+.footer{text-align:center;font-size:12px;padding:20px;opacity:0.7;}
+#fileInput{display:none;}
 </style>
 </head>
 <body>
-<div class="box">
-<h2>One Saver ✅</h2>
-<p><b>1.</b> View Status on WhatsApp<br><b>2.</b> Save it here in HD</p>
-
-<!-- AD PLACE - EARN MONEY HERE -->
-<div class="ad-box">
-  <small>Advertisement</small><br>
-  <!-- PASTE YOUR AD CODE HERE - From Monetag / Adsterra -->
-  <p style="color:gray">Your Ad Will Show Here</p>
+<div class="header"><div class="logo">⬇️ One Saver <span class="domain">onesaver.co.ke</span></div><div style="color:white;font-size:28px;">☰</div></div>
+<div class="container">
+<div class="card"><div style="display:flex;justify-content:center;"><div class="badge">🇰🇪 Karibu • Proudly Kenyan • Fast, Free & Secure</div></div><div class="title">WhatsApp Status Saver</div><div class="subtitle">Download WhatsApp statuses easily. Save photos & videos to your device instantly.</div></div>
+<div class="ad-box">AD 1: Paste Google AdSense here - Your 1 bob per visitor</div>
+<div class="card">
+<div class="drop-zone" onclick="document.getElementById('fileInput').click()">
+<div style="font-size:40px;">☁️ ⬆️</div>
+<h3>Drag & drop your WhatsApp status file here</h3>
+<p style="color:#777;font-size:14px;">or paste the WhatsApp status link below</p>
+<input type="text" class="link-input" placeholder="https://wa.me/status/..." onclick="event.stopPropagation()">
+<button class="btn btn-green" id="selectBtn" onclick="event.stopPropagation(); document.getElementById('fileInput').click()">SELECT STATUS FILE</button>
+<div class="preview-area" id="previewArea"></div>
+<button class="btn btn-green" id="downloadBtn" style="display:none;">⬇️ DOWNLOAD NOW (HD)</button>
 </div>
-
-<button class="btn green" onclick="document.getElementById('file').click()">📁 SELECT STATUS</button>
-<input type="file" id="file" accept="video/*,image/*" hidden>
-
-<video id="previewVideo" controls></video>
-<img id="previewImg">
-
-<button class="btn blue" id="downBtn" style="display:none">⬇️ DOWNLOAD NOW</button>
-
-<!-- WHATSAPP HELP BUTTON -->
-<a class="btn dark" href="https://wa.me/254713834153?text=Hi%20One%20Saver%20help%20me">💬 Need Help? WhatsApp Me</a>
-
-<p style="font-size:11px;color:gray">HD Quality • Fast • Free • Wajir Made</p>
+<input type="file" id="fileInput" accept="image/*,video/*">
 </div>
-
+<div class="ad-box" id="ad2" style="display:none;">AD 2: Shows after download - Earn extra!</div>
+<div class="card"><div class="how-title">How it works:</div><div class="how-text">1. View status on WhatsApp • 2. Go to File Manager >.Statuses • 3. Upload here & download</div><div style="margin-top:10px;color:#00b050;font-weight:700;font-size:13px;">✓ No Login Required ✓ 100% Secure ✓ Fast Download</div><a href="https://wa.me/2547XXXXXXXX?text=Habari" style="text-decoration:none;"><button class="btn btn-black">WhatsApp</button></a></div>
+<div class="footer">Proudly Made in Wajir, Kenya 🇰🇪<br>One Saver © 2026</div>
+</div>
 <script>
-const fileInput=document.getElementById('file');
-const video=document.getElementById('previewVideo');
-const img=document.getElementById('previewImg');
-const downBtn=document.getElementById('downBtn');
-let fileURL;
-fileInput.addEventListener('change',function(){
-  const file=this.files[0]; if(!file) return;
-  fileURL=URL.createObjectURL(file);
-  if(file.type.startsWith('video')){
-    video.src=fileURL; video.style.display='block'; img.style.display='none';
-  }else{
-    img.src=fileURL; img.style.display='block'; video.style.display='none';
-  }
-  downBtn.style.display='block';
-  downBtn.textContent='⬇️ DOWNLOAD '+file.name;
-});
-downBtn.addEventListener('click',function(){
-  const a=document.createElement('a'); a.href=fileURL;
-  a.download=fileInput.files[0].name; a.click();
-});
+const fileInput=document.getElementById('fileInput'),previewArea=document.getElementById('previewArea'),downloadBtn=document.getElementById('downloadBtn'),ad2=document.getElementById('ad2');
+let currentFile=null,currentURL=null;
+fileInput.addEventListener('change',handleFile);
+function handleFile(){const file=fileInput.files[0];if(!file)return;currentFile=file;if(currentURL)URL.revokeObjectURL(currentURL);currentURL=URL.createObjectURL(file);previewArea.style.display='block';previewArea.innerHTML=file.type.startsWith('image/')?`<img src="${currentURL}">`:`<video src="${currentURL}" controls></video>`;downloadBtn.style.display='block';document.getElementById('selectBtn').innerText='CHANGE FILE';ad2.style.display='block';}
+downloadBtn.addEventListener('click',()=>{if(!currentURL)return;const a=document.createElement('a');a.href=currentURL;a.download='one-saver-'+Date.now()+'-'+currentFile.name;document.body.appendChild(a);a.click();a.remove();downloadBtn.innerText='✅ DOWNLOADED!';});
 </script>
 </body>
 </html>
