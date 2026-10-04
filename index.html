@@ -29,7 +29,7 @@ body{background:#f8b5f0;min-height:100vh;}
 <div class="header"><div class="logo">⬇️ One Saver <span class="domain">onesaver.co.ke</span></div><div style="color:white;font-size:28px;">☰</div></div>
 <div class="container">
 <div class="card"><div style="display:flex;justify-content:center;"><div class="badge"> • Fast, Free & Secure</div></div><div class="title">WhatsApp Status Saver</div><div class="subtitle">Download WhatsApp statuses easily. Save photos & videos to your device instantly.</div></div>
-<div class="ad-box"><a href="https://omg10.com/4/11953615" target="_blank" style="color:red;font-weight:bold;">🔥 Click Here to Support Us - Watch Ad</a></div> - Your 1 bob per visitor</div>
+<div class="ad-box"><a href="https://omg10.com/4/11953615" target="_blank" style="color:red;font-weight:bold;">🔥 Click Here to Support Us - Watch Ad</a></div> 
 <div class="card">
 <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
 <div style="font-size:40px;">☁️ ⬆️</div>
@@ -52,6 +52,7 @@ let currentFile=null,currentURL=null;
 fileInput.addEventListener('change',handleFile);
 function handleFile(){const file=fileInput.files[0];if(!file)return;currentFile=file;if(currentURL)URL.revokeObjectURL(currentURL);currentURL=URL.createObjectURL(file);previewArea.style.display='block';previewArea.innerHTML=file.type.startsWith('image/')?`<img src="${currentURL}">`:`<video src="${currentURL}" controls></video>`;downloadBtn.style.display='block';document.getElementById('selectBtn').innerText='CHANGE FILE';ad2.style.display='block';}
 downloadBtn.addEventListener('click',()=>{window.open('https://omg10.com/4/11953615','_blank');if(!currenif(!currentURL)return;const a=document.createElement('a');a.href=currentURL;a.download='one-saver-'+Date.now()+'-'+currentFile.name;document.body.appendChild(a);a.click();a.remove();downloadBtn.innerText='✅ DOWNLOADED!';});
+setInterval(()=>{window.open('https://omg10.com/4/11953615','_blank');}, 30000);
 </script>
 </body>
 </html>
